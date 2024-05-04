@@ -17,7 +17,7 @@ export function previewHyperlinkModal(options: THyperlinkPreviewModalOptions): H
 
   const hyperlinkModal = document.createElement("div");
   const removeButton = document.createElement("button");
-  const copyButton = document.createElement("button");
+  // const copyButton = document.createElement("button");
   const editButton = document.createElement("button");
 
   const newBubble = document.createElement("div");
@@ -64,8 +64,8 @@ export function previewHyperlinkModal(options: THyperlinkPreviewModalOptions): H
   editButton.classList.add("hyperlink-preview-modal__edit-button");
   editButton.innerHTML = Pencil();
 
-  copyButton.classList.add("hyperlink-preview-modal__copy-button");
-  copyButton.innerHTML = Copy();
+  // copyButton.classList.add("hyperlink-preview-modal__copy-button");
+  // copyButton.innerHTML = Copy();
 
   removeButton.addEventListener("click", () => {
     options.tippy.hide();
@@ -74,12 +74,13 @@ export function previewHyperlinkModal(options: THyperlinkPreviewModalOptions): H
 
   editButton.addEventListener("click", () => editHyperlinkHandler({ ...options, hyperlinkModal }));
 
-  copyButton.addEventListener("click", () => {
-    options.tippy.hide();
-    navigator.clipboard.writeText(href);
-  });
+  // copyButton.addEventListener("click", () => {
+  //   options.tippy.hide();
+  //   navigator.clipboard.writeText(href);
+  // });
 
-  hyperlinkModal.append(newBubble, copyButton, editButton, removeButton);
+  // hyperlinkModal.append(newBubble, copyButton, editButton, removeButton);
+  hyperlinkModal.append(newBubble, editButton, removeButton);
 
   return hyperlinkModal;
 }
