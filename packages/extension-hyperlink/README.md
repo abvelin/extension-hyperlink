@@ -13,6 +13,7 @@ In a real world application, you would probably add a more sophisticated user in
 ````sh
 npm install @docs.plus/extension-hyperlink
 ````
+## The version is // "@docs.plus/extension-hyperlink": "^1.5.2",
 
 ## Settings
 
